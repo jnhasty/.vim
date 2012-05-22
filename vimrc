@@ -5,6 +5,7 @@ set nocompatible                  " Must come first because it changes other opt
 
 silent! call pathogen#runtime_append_all_bundles()
 let g:LustyExplorerSuppressRubyWarning = 1
+let g:butExplorerShowRelativepath = 1
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -65,8 +66,8 @@ map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
-
+map <leader>tm :tabmove<cr>
+map <leader>tg :TlistToggle<cr>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 
@@ -78,8 +79,8 @@ map <leader>tm :tabmove
 "vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+ autocmd FileType ruby setlocal foldmethod=syntax
+ autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
