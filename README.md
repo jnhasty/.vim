@@ -1,4 +1,4 @@
 .vim
 ====
-
-vim settings, used in combination with macvim
++ my bash profile
++ vim settings, used in combination with macvim
