@@ -100,4 +100,5 @@ let g:butExplorerShowRelativepath = 1
 let g:syntastic_auto_loc_lis=1
 let g:syntastic_enable_signs=1
 
-
+"tags list
+let Tlist_Auto_Open = 1
