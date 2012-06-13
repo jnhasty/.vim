@@ -4,8 +4,8 @@
 set nocompatible                  " Must come first because it changes other options.
 
 silent! call pathogen#runtime_append_all_bundles()
-let g:LustyExplorerSuppressRubyWarning = 1
-let g:butExplorerShowRelativepath = 1
+
+:setlocal spell spelllang=en_us   " spellchecking
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -54,8 +54,13 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-colorscheme vividchalk 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
+set ofu=syntaxcomplete#Complete "turn on autocomplete
+
+colorscheme vividchalk 
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -81,6 +86,19 @@ map <leader>tg :TlistToggle<cr>
 " Automatic fold settings for specific files. Uncomment to use.
  autocmd FileType ruby setlocal foldmethod=syntax
  autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+ autocmd FileType python  setlocal foldmethod=syntax
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+
+" lusty explorer
+let g:LustyExplorerSuppressRubyWarning = 1
+let g:butExplorerShowRelativepath = 1
+
+
+" syntastic
+let g:syntastic_auto_loc_lis=1
+let g:syntastic_enable_signs=1
+
+"tags list
+let Tlist_Auto_Open = 1
