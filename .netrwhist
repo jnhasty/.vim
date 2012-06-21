@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/rizzla/bin/vimconf'
 let g:netrw_dirhist_2='/Users/rhiz/Desktop/PEEPCODE/cambridge-books-arena-client/app/routers'
 let g:netrw_dirhist_3='/Users/rhiz/git/rhizomedotorg/artbase/management'
 let g:netrw_dirhist_4='/Users/rhiz/git/rhizomedotorg/artbase/management/commands'
+let g:netrw_dirhist_5='/Users/rhiz/git/rhizomedotorg/mailinglists'
+let g:netrw_dirhist_6='/Users/rhiz/.vim'
