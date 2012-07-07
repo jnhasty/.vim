@@ -34,14 +34,14 @@ PS1='\[$darkgreen$bold\]\u@\h:\[$lightcyann\]\w\[$lightcyann\]\$ '
 
 
 #mysql
-PATH=$PATH:/usr/bin/:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 
 #postgre
 export PATH=/usr/local/pgsql/bin:$PATH
 export PGDATA=/usr/local/pgsql/data
 
 # MacPorts Installer addition on 2009-09-25_at_13:48:45: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin/:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
