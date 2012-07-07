@@ -1,6 +1,7 @@
 alias ls='ls -aFhlG'
 alias ll='ls -l'
-alias vim='mvim'
+alias vim='~/.vim/mvim'
+alias mvim='~/.vim/mvim'
 alias search=grep
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -16,6 +17,8 @@ alias syncdb='python manage.py syncdb'
 alias runserver='python manage.py runserver'
 alias activate='source bin/activate'
 alias vactivate='source venv/bin/activate'
+#alias mvim='~/.vim/mvim'
+
 #PS1="\e[0;32m\]\u@\h \w \$ \e[1;36m\]\$ "
 
 red=$(tput setaf 1)
@@ -29,7 +32,6 @@ lightcyann=$(tput bold ; tput setaf 6)
 PS1='\[$darkgreen$bold\]\u@\h:\[$lightcyann\]\w\[$lightcyann\]\$ '
 
 
-function mvim { /Applications/MacVim.app/Contents/MacOS/Vim -g $*; }
 
 #mysql
 PATH=$PATH:/usr/bin/:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
@@ -54,3 +56,12 @@ export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
 export PATH=~/.npm/less/1.2.2/package/bin/lessc:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+##
+# Your previous /Users/rizzla/.bash_profile file was backed up as /Users/rizzla/.bash_profile.macports-saved_2012-07-06_at_22:54:29
+##
+
+# MacPorts Installer addition on 2012-07-06_at_22:54:29: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
