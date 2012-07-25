@@ -48,6 +48,7 @@ set smartindent
 set autoindent
 
 set laststatus=2                  " Show the status line all the time
+
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
@@ -56,6 +57,8 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 set ofu=syntaxcomplete#Complete "turn on autocomplete
+ 
+let g:SuperTabDefaultCompletionType = "context"
 
 colorscheme vividchalk 
 
@@ -72,13 +75,6 @@ map <leader>tm :tabmove<cr>
 map <leader>tg :TlistToggle<cr>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
  autocmd FileType ruby setlocal foldmethod=syntax
