@@ -1,6 +1,3 @@
-" Example Vim configuration.
-" Copy or symlink to ~/.vimrc or ~/_vimrc.
-
 set nocompatible                  " Must come first because it changes other options.
 
 silent! call pathogen#runtime_append_all_bundles()
@@ -51,6 +48,7 @@ set smartindent
 set autoindent
 
 set laststatus=2                  " Show the status line all the time
+
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
@@ -64,6 +62,7 @@ function! Tab_Or_Complete()
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+let g:SuperTabDefaultCompletionType = "context"
 set wildmode=longest,list,full
 set wildmenu
 
@@ -71,10 +70,12 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 set ofu=syntaxcomplete#Complete 
-set omnifunc=htmlcomplete#CompleteTags
 
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim 
+ 
 colorscheme vividchalk 
 
 " Tab mappings.
@@ -90,13 +91,6 @@ map <leader>tm :tabmove<cr>
 map <leader>tg :TlistToggle<cr>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
  autocmd FileType ruby setlocal foldmethod=syntax
