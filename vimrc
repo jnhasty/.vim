@@ -60,9 +60,11 @@ function! Tab_Or_Complete()
     return "\<Tab>"
   endif
 endfunction
-:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
-let g:SuperTabDefaultCompletionType = "context"
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+:iabbrev </ </<C-X><C-O>
+
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 set wildmode=longest,list,full
 set wildmenu
 
@@ -72,6 +74,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 set ofu=syntaxcomplete#Complete 
+
+
 
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim 
