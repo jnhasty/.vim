@@ -17,6 +17,10 @@ alias syncdb='python manage.py syncdb'
 alias runserver='python manage.py runserver'
 alias activate='source bin/activate'
 alias vactivate='source venv/bin/activate'
+alias mongoshell='/usr/local/Cellar/mongodb/2.2.1-x86_64/bin/mongo'
+alias apachestart='sudo apachectl start'
+alias apachestop='sudo apachectl stop'
+alias apacherestart='sudo apachectl restart'
 #alias mvim='~/.vim/mvim'
 
 #PS1="\e[0;32m\]\u@\h \w \$ \e[1;36m\]\$ "
@@ -40,11 +44,6 @@ PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 export PATH=/usr/local/pgsql/bin:$PATH
 export PGDATA=/usr/local/pgsql/data
 
-# MacPorts Installer addition on 2009-09-25_at_13:48:45: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
 #postgis frameworks
 export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
 export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
@@ -57,11 +56,13 @@ export PATH=~/.npm/less/1.2.2/package/bin/lessc:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-##
-# Your previous /Users/rizzla/.bash_profile file was backed up as /Users/rizzla/.bash_profile.macports-saved_2012-07-06_at_22:54:29
-##
-
 # MacPorts Installer addition on 2012-07-06_at_22:54:29: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
+
+#homebrew ruby/gems
+export PATH=/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
+
+#homebrew ruby/gems
+export PATH=/Users/rizzla/pear/bin:$PATH
+
 

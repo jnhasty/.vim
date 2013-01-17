@@ -69,7 +69,11 @@ set wildmode=longest,list,full
 set wildmenu
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
+let g:node_usejscomplete = 1
+
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -115,3 +119,8 @@ let g:syntastic_enable_signs=1
 
 "tags list
 let Tlist_Auto_Open = 1
+
+" Go Lang
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
