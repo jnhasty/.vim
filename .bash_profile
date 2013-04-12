@@ -35,8 +35,6 @@ lightblue=$(tput bold ; tput setaf 4)
 lightcyann=$(tput bold ; tput setaf 6)
 PS1='\[$darkgreen$bold\]\u@\h:\[$lightcyann\]\w\[$lightcyann\]\$ '
 
-
-
 #mysql
 PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 
@@ -64,5 +62,8 @@ export PATH=/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
 
 #homebrew ruby/gems
 export PATH=/Users/rizzla/pear/bin:$PATH
+
+
+
 
 
