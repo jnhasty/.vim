@@ -40,7 +40,7 @@ set nowritebackup                 " And again.
 set directory=$HOME/bin/vimconf//,.  " Keep swap files in one location
 
 " UNCOMMENT TO USE
-set tabstop=8                    " Global tab width.
+set tabstop=4                    " Global tab width.
 set shiftwidth=4                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 set softtabstop=4
@@ -102,7 +102,7 @@ map <leader>tg :TlistToggle<cr>
 
 " Automatic fold settings for specific files. Uncomment to use.
  autocmd FileType ruby setlocal foldmethod=syntax
- autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+ autocmd FileType css  setlocal foldmethod=indent shiftwidth=4 tabstop=4
  autocmd FileType python  setlocal foldmethod=syntax
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
